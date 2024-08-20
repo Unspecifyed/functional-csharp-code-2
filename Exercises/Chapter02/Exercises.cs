@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.VisualBasic;
 
 namespace Exercises.Chapter2
 {
@@ -12,6 +13,9 @@ namespace Exercises.Chapter2
 
       // 2. Write a method that uses quicksort to sort a `List<int>` (return a new list,
       // rather than sorting it in place).
+      static List<int> numbers = Enumerable.Range(1,11).ToList();
+      static List<int> numbersB = numbers.OrderByDescending(n => n).ToList();
+
 
       // 3. Generalize your implementation to take a `List<T>`, and additionally a 
       // `Comparison<T>` delegate.
