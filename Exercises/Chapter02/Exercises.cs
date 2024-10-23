@@ -20,6 +20,10 @@ namespace Exercises.Chapter2
       // 3. Generalize your implementation to take a `List<T>`, and additionally a 
       // `Comparison<T>` delegate.
 
+      static List<T> sort<T>(List<T> list, Comparison<T> comparison){
+         return list.OrderBy(x => x, Comparer<T>.Create(comparison)).ToList();
+      }
+
       // 4. In this chapter, you've seen a `Using` function that takes an `IDisposable`
       // and a function of type `Func<TDisp, R>`. Write an overload of `Using` that
       // takes a `Func<IDisposable>` as first
